@@ -27,7 +27,7 @@ html {
 }
 
 body {
-    color: #666666;
+    color: #248a97;
     font-size: 14px;
     font-family: 'Sen', sans-serif;
     line-height: 1.80857;
@@ -655,6 +655,42 @@ hr.border_main {
     padding: 10px 10px;
     box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.26);
 }
+    .image_box:hover{
+        top:-10px;
+        transform:scale(1.1);
+      }
+      .image_box::before,a::after{
+        content:'';
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgb(255, 255, 255);
+        z-index: -1;
+        border-radius: 4px;
+        transition: all 0.25s;
+      }
+      .image_box::after{
+        content:'';
+        position:absolute;
+        bottom:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(53, 51, 147, 0.2);
+        z-index: -2;
+        border-radius: 4px;
+        transition: all 0.25s;
+      }
+      .image_box:hover:before{
+        opacity:0.9;
+      }
+      .image_box:hover:after{
+        bottom:-10px;
+        transform:scale(0.9)
+      }
+      
 .left_box{
     width: 70%;
     float: left;
